@@ -57,8 +57,9 @@ def search():
     )
     return jsonify(response['hits']['hits'])
 
+#IF NEEDED , Created here not created in frontend 
 # CRUD Endpoints
-@app.route('/create', methods=['POST'])
+'''@app.route('/create', methods=['POST'])
 def create_document():
     doc = request.json
     res = es.index(index=index_name, body=doc)
@@ -78,7 +79,7 @@ def update_document(id):
 @app.route('/delete/<id>', methods=['DELETE'])
 def delete_document(id):
     res = es.delete(index=index_name, id=id)
-    return jsonify(res)
+    return jsonify(res)'''
 
 # Error handling
 @app.errorhandler(404)
